@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import MobileMenu from './MobileMenu';
 
 const Header = () => {
   return (
@@ -6,18 +7,7 @@ const Header = () => {
       <div className="font-light text-4xl">
         <Link href="/">anuár</Link>
       </div>
-      <svg
-        width="25"
-        height="19"
-        viewBox="0 0 57 36"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="md:hidden"
-      >
-        <rect width="57" height="8" rx="4" fill="black" />
-        <rect y="14" width="57" height="8" rx="4" fill="black" />
-        <rect y="28" width="57" height="8" rx="4" fill="black" />
-      </svg>
+      <MobileMenu />
       <nav className="hidden md:block">
         <ul className="flex items-center gap-4">
           <li>
