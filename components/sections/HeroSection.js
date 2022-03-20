@@ -1,26 +1,28 @@
-import HeroBg from '../HeroBg';
+import BgBubbles from '../BgBubbles';
 import PrimaryButton from '../PrimaryButton';
 
 const HeroSection = () => {
   return (
     <section className="container max-w-6xl w-11/12 py-20 lg:pt-28">
-      <HeroBg
+      <BgBubbles
+        className="absolute left-0 top-[-100px] md:top-0 z-[-1]"
         width="100%"
-        height="702"
-        className="absolute top-[-100px] max-w-[1000px] left-0 sm:w-3/4 sm:left-1/2 sm:translate-x-[-50%] md:top-1/2 md:translate-y-[-60%] lg:top-[30rem] z-[-1]"
+        height="842"
       />
-      <h1 className="font-bold text-5xl lg:text-6xl xl:text-7xl md:mb-4 text-center">
+      <h1 className="font-bold text-6xl lg:text-7xl xl:text-8xl md:mb-4 text-center md:text-left">
         hey there, i&apos;m anuar
       </h1>
-      <h2 className="font-bold text-5xl text-secondary lg:text-6xl xl:text-7xl mb-4 md:mb-5 text-center">
+      <h2 className="font-bold text-6xl text-secondary lg:text-7xl xl:text-8xl mb-4 md:mb-5 text-center md:text-left">
         i help agencies, startups and brands.
       </h2>
-      <p className="text-center max-w-md mx-auto mb-5">
-        i develop compelling designs for small businesses using the most
-        sophisticated technologies available today for fully interactive and
-        responsive websites and apps.
+      <p className="text-center text-lg md:text-left max-w-xl mx-auto md:mx-0 mb-5">
+        i develop compelling designs for businesses using the most sophisticated
+        technologies available today for fully interactive and responsive
+        websites and apps.
       </p>
-      <PrimaryButton className="block mx-auto">let&apos;s talk</PrimaryButton>
+      <PrimaryButton className="block mx-auto md:inline-block">
+        let&apos;s talk
+      </PrimaryButton>
     </section>
   );
 };

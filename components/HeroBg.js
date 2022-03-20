@@ -1,4 +1,13 @@
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+
 const HeroBg = ({ width, height, className }) => {
+  const svgRef = useRef();
+
+  useEffect(() => {
+    gsap.from(svgRef.current, { scale: 20, duration: 2, easing: 'easeIn' });
+  }, []);
+
   return (
     <svg
       width={width}
@@ -7,6 +16,7 @@ const HeroBg = ({ width, height, className }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      ref={svgRef}
     >
       <g id="languages">
         <g id="cube">
@@ -20,26 +30,26 @@ const HeroBg = ({ width, height, className }) => {
             id="Vector_2"
             d="M52.2523 498.708L62.2498 492.898L62.219 503.766L52.2214 509.576L52.2523 498.708Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_3"
             d="M42.7937 493.247L52.7912 487.437L62.2499 492.898L52.2523 498.708L42.7937 493.247Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_4"
             d="M42.7937 493.247L52.7912 487.437L62.2499 492.898L52.2523 498.708L42.7937 493.247Z"
             fill="#028B9E"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_5"
@@ -47,51 +57,51 @@ const HeroBg = ({ width, height, className }) => {
             d="M52.2525 498.708L52.2216 509.576L42.7629 504.115L42.7938 493.247L52.2525 498.708Z"
             fill="#028B9E"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_6"
             d="M52.2525 498.708L52.2216 509.576L42.7629 504.115L42.7938 493.247L52.2525 498.708Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_7"
             d="M52.5066 517.013C62.7275 517.013 71.0131 508.727 71.0131 498.507C71.0131 488.286 62.7275 480 52.5066 480C42.2857 480 34 488.286 34 498.507C34 508.727 42.2857 517.013 52.5066 517.013Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>
-        <g id="setting-2">
+        <g id="setting-2" className="">
           <path
             id="Vector_8"
             d="M74.6441 401.964C78.6866 401.964 81.9637 398.687 81.9637 394.645C81.9637 390.602 78.6866 387.325 74.6441 387.325C70.6016 387.325 67.3245 390.602 67.3245 394.645C67.3245 398.687 70.6016 401.964 74.6441 401.964Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_9"
             d="M74.6442 397.782C76.3767 397.782 77.7812 396.377 77.7812 394.645C77.7812 392.912 76.3767 391.508 74.6442 391.508C72.9116 391.508 71.5071 392.912 71.5071 394.645C71.5071 396.377 72.9116 397.782 74.6442 397.782Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_10"
             d="M86.0412 384.144L81.5133 386.758L81.5201 386.77C81.1894 386.481 80.8408 386.213 80.4764 385.969L80.4886 385.972L81.8418 380.922C81.9494 380.52 81.893 380.092 81.685 379.731C81.477 379.371 81.1345 379.108 80.7328 379L77.1975 378.053C76.7958 377.946 76.3677 378.002 76.0075 378.21C75.6473 378.418 75.3845 378.761 75.2768 379.162L73.9237 384.213H73.9312C73.4973 384.242 73.0656 384.299 72.6387 384.383L72.6445 384.379L70.0305 379.852C69.9276 379.673 69.7905 379.517 69.6271 379.391C69.4637 379.266 69.2772 379.174 69.0782 379.121C68.8792 379.067 68.6717 379.054 68.4675 379.081C68.2632 379.107 68.0663 379.174 67.8879 379.277L64.7185 381.108C64.5401 381.211 64.3837 381.348 64.2582 381.512C64.1328 381.675 64.0408 381.861 63.9874 382.06C63.9341 382.259 63.9204 382.467 63.9473 382.671C63.9742 382.875 64.0411 383.072 64.1441 383.25L66.7581 387.778L66.7638 387.775C66.4778 388.103 66.2125 388.449 65.9697 388.811L65.9718 388.803L60.9215 387.45C60.5197 387.342 60.0916 387.399 59.7314 387.607C59.3712 387.815 59.1084 388.157 59.0008 388.559L58.0534 392.094C57.9458 392.496 58.0022 392.924 58.2103 393.284C58.4183 393.645 58.7609 393.908 59.1627 394.015L64.2126 395.368L64.2159 395.356C64.2456 395.794 64.303 396.23 64.3878 396.66L64.3814 396.649L59.8535 399.263C59.4932 399.471 59.2304 399.814 59.1226 400.215C59.0149 400.617 59.0712 401.045 59.279 401.406L61.11 404.575C61.213 404.753 61.35 404.91 61.5134 405.035C61.6768 405.161 61.8633 405.253 62.0623 405.306C62.2613 405.359 62.4688 405.373 62.6731 405.346C62.8773 405.319 63.0742 405.252 63.2526 405.149L67.7802 402.535L67.7701 402.518C68.1048 402.81 68.4579 403.081 68.8271 403.328L68.8052 403.322L67.452 408.372C67.3444 408.774 67.4007 409.202 67.6087 409.562C67.8167 409.922 68.1592 410.185 68.561 410.293L72.0963 411.24C72.498 411.348 72.9261 411.291 73.2863 411.083C73.6465 410.875 73.9093 410.533 74.017 410.131L75.3701 405.081L75.3436 405.074C75.7904 405.044 76.2349 404.986 76.6741 404.899L76.6508 404.912L79.2651 409.44C79.368 409.618 79.5051 409.775 79.6685 409.9C79.8319 410.026 80.0184 410.118 80.2174 410.171C80.4164 410.224 80.6239 410.238 80.8282 410.211C81.0324 410.184 81.2293 410.117 81.4077 410.014L84.5771 408.183C84.9373 407.975 85.2002 407.633 85.3079 407.231C85.4156 406.83 85.3594 406.401 85.1515 406.041L82.5375 401.513L82.5142 401.527C82.8092 401.19 83.082 400.834 83.331 400.462L83.3238 400.488L88.3737 401.842C88.5727 401.895 88.7802 401.909 88.9845 401.882C89.1887 401.855 89.3856 401.788 89.564 401.685C89.7424 401.582 89.8988 401.445 90.0242 401.281C90.1495 401.118 90.2415 400.931 90.2948 400.732L91.2419 397.198C91.2953 396.999 91.3089 396.791 91.282 396.587C91.2552 396.383 91.1884 396.186 91.0854 396.007C90.9824 395.829 90.8453 395.672 90.6818 395.547C90.5184 395.422 90.3319 395.33 90.1329 395.276L85.0797 393.925L85.0736 393.947C85.0443 393.504 84.9867 393.063 84.9009 392.627L84.911 392.645L89.4389 390.031C89.7991 389.823 90.062 389.48 90.1697 389.078C90.2774 388.676 90.2212 388.248 90.0133 387.888L88.1823 384.719C87.9744 384.359 87.6321 384.096 87.2306 383.988C86.8292 383.881 86.4014 383.937 86.0412 384.144Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>
         <g id="settings">
@@ -99,25 +109,25 @@ const HeroBg = ({ width, height, className }) => {
             id="Vector_11"
             d="M680.596 23.4474C684.383 23.4474 687.452 20.3779 687.452 16.5916C687.452 12.8053 684.383 9.73584 680.596 9.73584C676.81 9.73584 673.741 12.8053 673.741 16.5916C673.741 20.3779 676.81 23.4474 680.596 23.4474Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_12"
             d="M680.596 19.5297C682.219 19.5297 683.535 18.2143 683.535 16.5916C683.535 14.9688 682.219 13.6534 680.596 13.6534C678.974 13.6534 677.658 14.9688 677.658 16.5916C677.658 18.2143 678.974 19.5297 680.596 19.5297Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_13"
             d="M695.099 17.1857L690.369 15.9184L690.366 15.9302C690.338 15.5204 690.284 15.1127 690.205 14.7096L690.211 14.7196L694.452 12.2712C694.619 12.1748 694.766 12.0464 694.883 11.8934C695.001 11.7404 695.087 11.5658 695.137 11.3794C695.187 11.1931 695.2 10.9987 695.175 10.8075C695.149 10.6162 695.087 10.4317 694.99 10.2646L693.278 7.29483C693.083 6.95731 692.762 6.71098 692.386 6.60999C692.009 6.509 691.608 6.56163 691.271 6.7563L687.03 9.20479L687.033 9.21126C686.726 8.94282 686.402 8.69411 686.064 8.46666H686.07L687.337 3.73626C687.438 3.35992 687.385 2.95896 687.19 2.62158C686.996 2.2842 686.675 2.03804 686.298 1.93723L682.988 1.0501C682.801 1.00015 682.607 0.987386 682.416 1.01255C682.224 1.03771 682.04 1.1003 681.873 1.19675C681.706 1.29319 681.559 1.42161 681.442 1.57466C681.324 1.7277 681.238 1.90239 681.188 2.08874L679.921 6.81877H679.927C679.52 6.84655 679.115 6.89991 678.715 6.97853L678.721 6.97495L676.273 2.73425C676.078 2.39674 675.757 2.15039 675.381 2.0494C675.005 1.94841 674.603 2.00105 674.266 2.19572L671.297 3.90966C671.13 4.00606 670.984 4.13444 670.866 4.28747C670.748 4.44051 670.662 4.6152 670.612 4.80156C670.562 4.98793 670.549 5.18232 670.575 5.37363C670.6 5.56495 670.662 5.74944 670.759 5.91657L673.207 10.1573L673.217 10.1515C672.947 10.4613 672.696 10.7878 672.467 11.1291L672.47 11.1173L667.74 9.84959C667.364 9.74881 666.963 9.80166 666.626 9.9965C666.288 10.1913 666.042 10.5122 665.941 10.8886L665.054 14.1994C664.953 14.5758 665.006 14.9767 665.201 15.3142C665.395 15.6516 665.716 15.8978 666.093 15.9988L670.823 17.2661L670.828 17.2482C670.856 17.6633 670.911 18.0762 670.991 18.4843L670.981 18.466L666.74 20.9145C666.573 21.0108 666.426 21.1392 666.309 21.2922C666.191 21.4452 666.105 21.6198 666.055 21.8062C666.005 21.9925 665.992 22.1869 666.017 22.3782C666.042 22.5694 666.105 22.7539 666.201 22.921L667.915 25.8897C668.11 26.2272 668.431 26.4736 668.807 26.5745C669.184 26.6755 669.585 26.6229 669.922 26.4282L674.163 23.9797L674.15 23.9575C674.466 24.2338 674.799 24.4894 675.147 24.7225L675.123 24.7161L673.856 29.4461C673.806 29.6325 673.793 29.8268 673.818 30.0181C673.843 30.2094 673.906 30.3938 674.002 30.5609C674.099 30.728 674.227 30.8745 674.38 30.9919C674.533 31.1094 674.708 31.1956 674.894 31.2455L678.205 32.1326C678.392 32.1826 678.586 32.1954 678.777 32.1703C678.969 32.1451 679.153 32.0826 679.32 31.9861C679.487 31.8896 679.634 31.7612 679.751 31.6081C679.868 31.4551 679.955 31.2804 680.004 31.094L681.272 26.364L681.248 26.3575C681.666 26.3296 682.082 26.2747 682.494 26.1931L682.472 26.206L684.92 30.4467C685.016 30.6139 685.145 30.7604 685.298 30.878C685.451 30.9956 685.626 31.0818 685.812 31.1318C685.998 31.1818 686.193 31.1946 686.384 31.1695C686.575 31.1443 686.76 31.0817 686.927 30.9852L689.895 29.2713C690.063 29.1749 690.209 29.0466 690.327 28.8935C690.444 28.7405 690.53 28.5658 690.58 28.3794C690.63 28.193 690.643 27.9986 690.618 27.8073C690.593 27.616 690.53 27.4315 690.434 27.2644L687.985 23.0237L687.967 23.0345C688.241 22.7214 688.495 22.391 688.727 22.0454L688.722 22.0637L693.452 23.3314C693.829 23.4321 694.23 23.3793 694.567 23.1844C694.904 22.9896 695.151 22.6687 695.251 22.2924L696.139 18.9815C696.238 18.6055 696.185 18.2054 695.99 17.8687C695.795 17.5321 695.475 17.2865 695.099 17.1857V17.1857Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <g id="Group" opacity="0.49">
             <path
@@ -162,9 +172,9 @@ const HeroBg = ({ width, height, className }) => {
             id="Vector_20"
             d="M779.562 647.754L789.634 641.9L789.604 652.851L779.53 658.704L779.562 647.754Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_21"
@@ -172,7 +182,7 @@ const HeroBg = ({ width, height, className }) => {
             d="M770.031 642.251L780.104 636.397L789.634 641.9L779.561 647.754L770.031 642.251Z"
             fill="#FF5855"
             stroke="#1E223B"
-            stroke-miterlimit="10"
+            strokeMiterlimit="10"
           />
           <path
             id="Vector_22"
@@ -183,17 +193,17 @@ const HeroBg = ({ width, height, className }) => {
             id="Vector_23"
             d="M770.031 642.251L780.104 636.397L789.634 641.9L779.561 647.754L770.031 642.251Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_24"
             d="M779.561 647.754L779.53 658.704L770 653.202L770.031 642.251L779.561 647.754Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_25"
@@ -205,9 +215,9 @@ const HeroBg = ({ width, height, className }) => {
             id="Vector_26"
             d="M772.17 632.308C773.36 632.308 774.324 631.344 774.324 630.154C774.324 628.964 773.36 628 772.17 628C770.981 628 770.016 628.964 770.016 630.154C770.016 631.344 770.981 632.308 772.17 632.308Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_27"
@@ -219,9 +229,9 @@ const HeroBg = ({ width, height, className }) => {
             id="Vector_28"
             d="M779.53 632.308C780.72 632.308 781.684 631.344 781.684 630.154C781.684 628.964 780.72 628 779.53 628C778.34 628 777.376 628.964 777.376 630.154C777.376 631.344 778.34 632.308 779.53 632.308Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_29"
@@ -233,9 +243,9 @@ const HeroBg = ({ width, height, className }) => {
             id="Vector_30"
             d="M786.89 632.308C788.08 632.308 789.044 631.344 789.044 630.154C789.044 628.964 788.08 628 786.89 628C785.7 628 784.736 628.964 784.736 630.154C784.736 631.344 785.7 632.308 786.89 632.308Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>
         <g id="cube-2">
@@ -249,9 +259,9 @@ const HeroBg = ({ width, height, className }) => {
             id="Vector_32"
             d="M1003.38 365.335L995.715 360.883L995.738 369.212L1003.4 373.664L1003.38 365.335Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_33"
@@ -263,34 +273,34 @@ const HeroBg = ({ width, height, className }) => {
             id="Vector_34"
             d="M1010.62 361.151L1002.96 356.699L995.715 360.883L1003.38 365.335L1010.62 361.151Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_35"
             d="M1003.38 365.335L1003.4 373.664L1010.65 369.479L1010.62 361.151L1003.38 365.335Z"
             fill="white"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_36"
             d="M1003.38 365.335L1003.4 373.664L1010.65 369.479L1010.62 361.151L1003.38 365.335Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_37"
             d="M1003.18 379.362C1011.01 379.362 1017.36 373.013 1017.36 365.181C1017.36 357.349 1011.01 351 1003.18 351C995.349 351 989 357.349 989 365.181C989 373.013 995.349 379.362 1003.18 379.362Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>
         <g id="CSS">
@@ -303,9 +313,9 @@ const HeroBg = ({ width, height, className }) => {
             id="Vector_39"
             d="M1080.38 121H1055.25C1053.45 121 1052 122.453 1052 124.246V133.985C1052 135.777 1053.45 137.231 1055.25 137.231H1080.38C1082.17 137.231 1083.62 135.777 1083.62 133.985V124.246C1083.62 122.453 1082.17 121 1080.38 121Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_40"
@@ -361,45 +371,45 @@ const HeroBg = ({ width, height, className }) => {
             opacity="0.15"
             d="M1076 274H1109.75"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_50"
             opacity="0.32"
             d="M1076 277.112H1097.54"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_51"
             opacity="0.32"
             d="M1093.23 280.223H1105.8"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_52"
             opacity="0.26"
             d="M1076 280.223H1091.08"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_53"
             opacity="0.15"
             d="M1076 283.334H1088.92"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>
         <g id="loading">
@@ -408,14 +418,14 @@ const HeroBg = ({ width, height, className }) => {
             d="M949.436 331.128C949.055 331.128 948.69 330.963 948.421 330.67C948.151 330.377 948 329.979 948 329.564C948 329.149 948.151 328.751 948.421 328.458C948.69 328.165 949.055 328 949.436 328H978.397V331.128H949.436Z"
             fill="#4AD3A5"
             stroke="#1E223B"
-            stroke-miterlimit="10"
+            strokeMiterlimit="10"
           />
           <path
             id="Vector_55"
             d="M994.672 331.128H949.436C948.643 331.128 948 330.428 948 329.564C948 328.7 948.643 328 949.436 328H994.672C995.465 328 996.108 328.7 996.108 329.564C996.108 330.428 995.465 331.128 994.672 331.128Z"
             stroke="#1E223B"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>
         <g id="comment-2">
@@ -428,25 +438,25 @@ const HeroBg = ({ width, height, className }) => {
             id="Vector_57"
             d="M120.446 693.538H111.04L101.224 700.082V693.538H94.2717C93.404 693.538 92.5718 693.194 91.9583 692.58C91.3447 691.967 91 691.134 91 690.267V672.272C91 671.404 91.3447 670.572 91.9583 669.958C92.5718 669.345 93.404 669 94.2717 669H120.446C120.876 669 121.301 669.085 121.698 669.249C122.095 669.413 122.456 669.654 122.76 669.958C123.064 670.262 123.305 670.623 123.469 671.02C123.634 671.417 123.718 671.842 123.718 672.272V690.267C123.718 690.696 123.634 691.122 123.469 691.519C123.305 691.916 123.064 692.276 122.76 692.58C122.456 692.884 122.095 693.125 121.698 693.289C121.301 693.454 120.876 693.538 120.446 693.538Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_58"
             d="M98.0186 681.049H113.097"
             stroke="#1E223B"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_59"
             d="M98.0186 685.896H106.635"
             stroke="#1E223B"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>
         <g id="coment-1">
@@ -460,25 +470,25 @@ const HeroBg = ({ width, height, className }) => {
             id="Vector_61"
             d="M1081.12 581.889H1087.21L1093.56 586.125V581.889H1098.06C1098.63 581.889 1099.16 581.666 1099.56 581.269C1099.96 580.871 1100.18 580.333 1100.18 579.771V568.118C1100.18 567.556 1099.96 567.018 1099.56 566.62C1099.16 566.223 1098.63 566 1098.06 566H1081.12C1080.56 566 1080.02 566.223 1079.62 566.62C1079.22 567.018 1079 567.556 1079 568.118V579.77C1079 580.048 1079.05 580.324 1079.16 580.581C1079.27 580.838 1079.42 581.072 1079.62 581.268C1079.82 581.465 1080.05 581.621 1080.31 581.728C1080.56 581.834 1080.84 581.889 1081.12 581.889V581.889Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_62"
             d="M1084.28 572.139H1093.98"
             stroke="#1E223B"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_63"
             d="M1084.28 574.652H1090.39"
             stroke="#1E223B"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>
         <path
@@ -487,7 +497,7 @@ const HeroBg = ({ width, height, className }) => {
           d="M998.745 466.857C1000.23 466.857 1001.44 465.652 1001.44 464.165C1001.44 462.677 1000.23 461.472 998.745 461.472C997.258 461.472 996.053 462.677 996.053 464.165C996.053 465.652 997.258 466.857 998.745 466.857Z"
           fill="white"
         />
-        <g id="sql">
+        <g id="sql" className="">
           <path
             id="Vector_65"
             d="M948.375 20H923.246C921.453 20 920 21.4534 920 23.2462V32.9846C920 34.7774 921.453 36.2308 923.246 36.2308H948.375C950.168 36.2308 951.621 34.7774 951.621 32.9846V23.2462C951.621 21.4534 950.168 20 948.375 20Z"
@@ -497,9 +507,9 @@ const HeroBg = ({ width, height, className }) => {
             id="Vector_66"
             d="M948.375 20H923.246C921.453 20 920 21.4534 920 23.2462V32.9846C920 34.7774 921.453 36.2308 923.246 36.2308H948.375C950.168 36.2308 951.621 34.7774 951.621 32.9846V23.2462C951.621 21.4534 950.168 20 948.375 20Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_67"
@@ -523,16 +533,16 @@ const HeroBg = ({ width, height, className }) => {
             d="M43.1718 211H4.87378C2.73435 211 1 212.734 1 214.874V225.867C1 228.007 2.73435 229.741 4.87378 229.741H43.1718C45.3113 229.741 47.0456 228.007 47.0456 225.867V214.874C47.0456 212.734 45.3113 211 43.1718 211Z"
             fill="#E44D26"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-miterlimit="10"
+            strokeWidth="2"
+            strokeMiterlimit="10"
           />
           <path
             id="Vector_71"
             d="M43.1718 211H4.87378C2.73435 211 1 212.734 1 214.874V225.867C1 228.007 2.73435 229.741 4.87378 229.741H43.1718C45.3113 229.741 47.0456 228.007 47.0456 225.867V214.874C47.0456 212.734 45.3113 211 43.1718 211Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Vector_72"
@@ -565,9 +575,9 @@ const HeroBg = ({ width, height, className }) => {
             id="Vector_77"
             d="M59.7073 28H34.5059C32.6587 28 31.1611 29.4975 31.1611 31.3448V41.3786C31.1611 43.2259 32.6587 44.7234 34.5059 44.7234H59.7073C61.5546 44.7234 63.0521 43.2259 63.0521 41.3786V31.3448C63.0521 29.4975 61.5546 28 59.7073 28Z"
             stroke="#1E223B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="JS_2"
