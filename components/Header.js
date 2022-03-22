@@ -5,7 +5,9 @@ const Header = () => {
   return (
     <header className="container py-6 max-w-6xl w-11/12 flex justify-between items-center">
       <div className="font-light text-4xl">
-        <Link href="/">anuár</Link>
+        <Link href="/">
+          <a className="font-secondary">anuár</a>
+        </Link>
       </div>
       <MobileMenu />
       <nav className="hidden md:block">

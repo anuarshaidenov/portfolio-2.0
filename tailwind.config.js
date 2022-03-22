@@ -46,7 +46,7 @@ module.exports = {
     },
     fontFamily: {
       main: ['Roboto', 'sans-serif'],
-      secondary: ['Roboto Slab', 'sans-serif'],
+      secondary: ['"Roboto Slab"', 'sans-serif'],
     },
     container: {
       center: true,

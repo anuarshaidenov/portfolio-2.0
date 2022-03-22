@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <section className="container max-w-6xl w-11/12 py-20 lg:pt-28">
       <BgBubbles
-        className="absolute left-0 top-[-100px] md:top-0 z-[-1]"
+        className="absolute overflow-visible left-0 top-[-100px] md:top-0 z-[-1]"
         width="100%"
         height="842"
       />
