@@ -6,7 +6,7 @@ const Header = () => {
     <header className="container py-6 max-w-6xl w-11/12 flex justify-between items-center">
       <div className="font-light text-4xl">
         <Link href="/">
-          <a className="font-secondary">anuár</a>
+          <a className="font-secondary font-thin">anuár</a>
         </Link>
       </div>
       <MobileMenu />

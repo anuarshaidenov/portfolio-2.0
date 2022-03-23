@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const ProjectCardBig = ({ className }) => {
   return (
-    <Link href="/" passHref>
+    <Link href="/projects/slug" passHref>
       <div
         className={`border-solid border-2 border-black px-4 py-10 lg:px-8 lg:py-15 rounded-2xl text-center grid gap-5 justify-items-center lg:justify-items-start lg:gap-y-8 lg:col-span-3 lg:text-left lg:grid-cols-3 lg:gap-x-8 hover:shadow-[-6px_6px_#000] transition-shadow duration-300 ease-in-out cursor-pointer ${
           className || ''
