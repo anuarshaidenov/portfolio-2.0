@@ -3,17 +3,36 @@ import { useState, useEffect } from 'react';
 
 const MobileMenu = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [stickyClass, setStickyClass] = useState('top-8');
 
   useEffect(() => {
-    if (showMenu) document.body.classList.add('fixed');
-    else document.body.classList.remove('fixed');
+    if (showMenu) document.body.classList.add('overflow-hidden');
+    else document.body.classList.remove('overflow-hidden');
   }, [showMenu]);
+
+  const stickNavbar = () => {
+    window?.scrollY > 100
+      ? setStickyClass(
+          'bg-secondary p-3 rounded-lg top-[85vh] shadow-xl z-10 text-white'
+        )
+      : setStickyClass('top-8');
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', stickNavbar);
+
+    return () => window.removeEventListener('scroll', stickNavbar);
+  }, []);
 
   const handleShowMenu = () => setShowMenu(!showMenu);
 
   return (
     <>
-      <button type="button" onClick={handleShowMenu} className="md:hidden">
+      <button
+        type="button"
+        onClick={handleShowMenu}
+        className={`md:hidden transition-all fixed right-5 ${stickyClass}`}
+      >
         menu
       </button>
 
