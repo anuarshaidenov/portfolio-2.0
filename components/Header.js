@@ -13,7 +13,7 @@ const Header = () => {
       <nav className="hidden md:block">
         <ul className="flex items-center gap-4">
           <li>
-            <Link href="/">
+            <Link href="/about">
               <a className="hover:text-secondary hover:opacity-60 transition-all duration-200">
                 about
               </a>
