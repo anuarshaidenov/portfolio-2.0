@@ -9,7 +9,7 @@ const ProjectCardBig = ({ className }) => {
         }`}
       >
         <h3 className="font-bold text-3xl lg:col-span-3 lg:text-7xl">
-          project title
+          project title.
         </h3>
         <ul className="flex flex-wrap justify-center items-center content-start lg:justify-start max-w-[280px] gap-[10px]">
           <li className="border-solid font-secondary border-2 border-black p-1 rounded-2xl text-[.6rem] px-2">

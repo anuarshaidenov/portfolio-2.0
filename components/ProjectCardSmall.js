@@ -8,7 +8,7 @@ const ProjectCardSmall = ({ className }) => {
           className || ''
         }`}
       >
-        <h3 className="font-bold text-3xl">project title</h3>
+        <h3 className="font-bold text-3xl">project title.</h3>
         <ul className="flex flex-wrap justify-center items-center gap-2 max-w-[280px]">
           <li className="border-solid font-secondary border-2 border-black p-1 rounded-2xl text-[.6rem] px-2">
             card tag
