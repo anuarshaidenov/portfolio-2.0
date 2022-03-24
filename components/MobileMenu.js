@@ -31,7 +31,7 @@ const MobileMenu = () => {
       <button
         type="button"
         onClick={handleShowMenu}
-        className={`md:hidden transition-all fixed right-5 ${stickyClass}`}
+        className={`md:hidden transition-all duration-500 fixed right-5 ${stickyClass}`}
       >
         menu
       </button>

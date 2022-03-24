@@ -14,7 +14,7 @@ export default function Document() {
         rel="stylesheet"
       />
       <Head />
-      <body className="bg-primary font-main">
+      <body className="bg-primary lowercase font-main">
         <Main />
         <NextScript />
       </body>
