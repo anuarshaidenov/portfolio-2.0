@@ -5,7 +5,7 @@ const ContactPage = () => {
   const [state, handleSubmit] = useForm('mwkajyvy');
 
   return (
-    <section className="container max-w-6xl w-11/12 py-20 md:pt-28 min-h-screen">
+    <section className="container max-w-6xl w-11/12 py-20 md:pt-40 min-h-screen">
       <h1 className="font-bold text-5xl mb-8 sm:text-7xl sm:mb-10 md:text-8xl md:mb-12 lg:text-9xl lg:mb-16">
         let&apos;s talk business.
       </h1>

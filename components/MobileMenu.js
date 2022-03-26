@@ -71,7 +71,7 @@ const MobileMenu = () => {
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/blog">
               <a onClick={handleShowMenu} className="font-medium text-3xl">
                 blog
               </a>

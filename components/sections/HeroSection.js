@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import BgBubbles from '../BgBubbles';
 import PrimaryButton from '../PrimaryButton';
 
@@ -20,9 +21,11 @@ const HeroSection = () => {
         technologies available today for fully interactive and responsive
         websites and apps.
       </p>
-      <PrimaryButton className="block mx-auto md:inline-block">
-        let&apos;s talk
-      </PrimaryButton>
+      <Link href="/contact" passHref>
+        <PrimaryButton className="block mx-auto md:inline-block">
+          let&apos;s talk
+        </PrimaryButton>
+      </Link>
     </section>
   );
 };

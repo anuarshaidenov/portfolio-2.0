@@ -1,6 +1,6 @@
 const ProjectDetails = () => {
   return (
-    <section className="container max-w-6xl w-11/12 py-20 lg:pt-28">
+    <section className="container max-w-6xl w-11/12 py-20 md:pt-40">
       <h1 className="font-bold text-5xl mb-8 sm:text-7xl sm:mb-10 md:text-8xl md:mb-12 lg:text-9xl lg:mb-16">
         long long project title.
       </h1>

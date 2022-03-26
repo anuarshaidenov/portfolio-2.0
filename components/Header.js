@@ -27,7 +27,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/blog">
               <a className="hover:text-secondary hover:opacity-60 transition-all duration-200">
                 blog
               </a>
