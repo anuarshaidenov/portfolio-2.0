@@ -40,6 +40,7 @@ module.exports = {
     colors: {
       primary: '#FFF0E5',
       secondary: '#F73E59',
+      tertiary: 'rgba(243, 80, 69, 0.1)',
       white: '#FFFFFF',
       black: '#000',
       transparent: 'transparent',

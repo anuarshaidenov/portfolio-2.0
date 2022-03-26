@@ -64,7 +64,7 @@ const MobileMenu = () => {
             </Link>
           </li>
           <li className="mb-4">
-            <Link href="/">
+            <Link href="/contact">
               <a onClick={handleShowMenu} className="font-medium text-3xl">
                 contact
               </a>

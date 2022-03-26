@@ -20,7 +20,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/contact">
               <a className="hover:text-secondary hover:opacity-60 transition-all duration-200">
                 contact
               </a>
