@@ -57,6 +57,13 @@ const MobileMenu = () => {
         </button>
         <ul className="mt-32">
           <li className="mb-4">
+            <Link href="/">
+              <a onClick={handleShowMenu} className="font-medium text-3xl">
+                home
+              </a>
+            </Link>
+          </li>
+          <li className="mb-4">
             <Link href="/about">
               <a onClick={handleShowMenu} className="font-medium text-3xl">
                 about

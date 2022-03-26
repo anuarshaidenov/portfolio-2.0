@@ -32,7 +32,7 @@ const ContactPage = () => {
               required
             />
             <label
-              className="text-sm font-secondary absolute peer-placeholder-shown:top-0 peer-focus:-top-4 -top-4 transition-all duration-75"
+              className="text-sm font-secondary absolute peer-placeholder-shown:top-0 peer-focus:-top-5 -top-5 transition-all duration-75"
               htmlFor="name"
             >
               name.
@@ -48,7 +48,7 @@ const ContactPage = () => {
               required
             />
             <label
-              className="text-sm font-secondary absolute peer-placeholder-shown:top-0 peer-focus:-top-4 -top-4 transition-all duration-75"
+              className="text-sm font-secondary absolute peer-placeholder-shown:top-0 peer-focus:-top-5 -top-5 transition-all duration-75"
               htmlFor="email"
             >
               email.
@@ -70,7 +70,7 @@ const ContactPage = () => {
               required
             ></textarea>
             <label
-              className="text-sm font-secondary absolute peer-placeholder-shown:top-0 peer-focus:-top-8 -top-8 transition-all duration-75"
+              className="text-sm font-secondary absolute peer-placeholder-shown:top-0 peer-focus:-top-5 -top-5 transition-all duration-75"
               htmlFor="message"
             >
               message.
