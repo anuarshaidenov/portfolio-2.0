@@ -1,9 +1,11 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 
 const MobileMenu = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [stickyClass, setStickyClass] = useState('top-8');
+  const router = useRouter();
 
   useEffect(() => {
     if (showMenu) document.body.classList.add('overflow-hidden');
@@ -58,28 +60,50 @@ const MobileMenu = () => {
         <ul className="mt-32">
           <li className="mb-4">
             <Link href="/">
-              <a onClick={handleShowMenu} className="font-medium text-3xl">
+              <a
+                onClick={handleShowMenu}
+                className={`font-medium text-3xl ${
+                  router.pathname == '/' ? 'text-secondary opacity-80' : ''
+                }`}
+              >
                 home
               </a>
             </Link>
           </li>
           <li className="mb-4">
             <Link href="/about">
-              <a onClick={handleShowMenu} className="font-medium text-3xl">
+              <a
+                onClick={handleShowMenu}
+                className={`font-medium text-3xl ${
+                  router.pathname == '/about' ? 'text-secondary opacity-80' : ''
+                }`}
+              >
                 about
               </a>
             </Link>
           </li>
           <li className="mb-4">
             <Link href="/contact">
-              <a onClick={handleShowMenu} className="font-medium text-3xl">
+              <a
+                onClick={handleShowMenu}
+                className={`font-medium text-3xl ${
+                  router.pathname == '/contact'
+                    ? 'text-secondary opacity-80'
+                    : ''
+                }`}
+              >
                 contact
               </a>
             </Link>
           </li>
           <li>
             <Link href="/blog">
-              <a onClick={handleShowMenu} className="font-medium text-3xl">
+              <a
+                onClick={handleShowMenu}
+                className={`font-medium text-3xl ${
+                  router.pathname == '/blog' ? 'text-secondary opacity-80' : ''
+                }`}
+              >
                 blog
               </a>
             </Link>

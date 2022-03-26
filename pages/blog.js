@@ -13,7 +13,7 @@ const BlogPage = ({ posts }) => {
               <li className="max-w-xl cursor-pointer">
                 <p className="font-secondary text-sm mb-2">{post.date}</p>
                 <h3 className="font-bold text-xl mb-2">{post.title}</h3>
-                <p className="text-sm">{post.description.slice(0, 200)}...</p>
+                <p className="text-sm">{post.description.slice(0, 240)}...</p>
               </li>
             </a>
           </Link>
