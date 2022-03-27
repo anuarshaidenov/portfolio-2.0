@@ -23,7 +23,7 @@ const HeroSection = () => {
       </p>
       <Link href="/contact" passHref>
         <PrimaryButton className="block mx-auto md:inline-block">
-          let&apos;s talk
+          let&apos;s talk.
         </PrimaryButton>
       </Link>
     </section>

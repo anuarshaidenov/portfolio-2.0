@@ -10,7 +10,7 @@ const BlogPage = ({ posts }) => {
         {posts.map((post) => (
           <Link key={post.link} href={post.link} passHref>
             <a target="_blank">
-              <li className="max-w-xl cursor-pointer">
+              <li className="max-w-xl cursor-pointer mb-10">
                 <p className="font-secondary text-sm mb-2">{post.date}</p>
                 <h3 className="font-bold text-xl mb-2">{post.title}</h3>
                 <p className="text-sm">{post.description.slice(0, 240)}...</p>
@@ -25,7 +25,7 @@ const BlogPage = ({ posts }) => {
 
 export const getStaticProps = async () => {
   const res = await fetch(
-    'https://mediumpostapi.herokuapp.com/?usermedium={{anuarshaidenov}}'
+    'https://mediumpostapi.herokuapp.com/?usermedium=anuarshaidenov'
   );
   const data = await res.json();
 

@@ -20,8 +20,8 @@ const ContactPage = () => {
           thanks, i&apos;ll get back to you asap!
         </p>
       ) : (
-        <form className="" onSubmit={handleSubmit}>
-          <div className="flex flex-col max-w-lg mb-7 relative">
+        <form className="max-w-2xl" onSubmit={handleSubmit}>
+          <div className="flex flex-col mb-7 relative">
             <ValidationError prefix="Name" field="name" errors={state.errors} />
             <input
               className="bg-transparent border-b-2 focus:outline-none peer placeholder-transparent focus:bg-tertiary"
@@ -38,7 +38,7 @@ const ContactPage = () => {
               name.
             </label>
           </div>
-          <div className="flex flex-col max-w-lg mb-10 relative">
+          <div className="flex flex-col mb-10 relative">
             <input
               className="bg-transparent border-b-2 focus:outline-none peer placeholder-transparent focus:bg-tertiary"
               type="email"
@@ -54,7 +54,7 @@ const ContactPage = () => {
               email.
             </label>
           </div>
-          <div className="flex flex-col max-w-lg mb-7 relative">
+          <div className="flex flex-col mb-7 relative">
             <ValidationError
               prefix="Message"
               field="message"
