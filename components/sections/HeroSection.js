@@ -10,19 +10,19 @@ const HeroSection = () => {
         width="100%"
         height="842"
       />
-      <h1 className="font-bold text-6xl lg:text-7xl xl:text-8xl md:mb-4 text-center md:text-left">
+      <h1 className="font-bold text-6xl lg:text-7xl xl:text-8xl md:mb-4 text-left">
         hey there, i&apos;m anuar
       </h1>
-      <h2 className="font-bold text-6xl text-secondary lg:text-7xl xl:text-8xl mb-4 md:mb-5 text-center md:text-left">
+      <h2 className="font-bold text-6xl text-secondary lg:text-7xl xl:text-8xl mb-4 md:mb-5 text-left">
         i help agencies, startups and brands.
       </h2>
-      <p className="text-center text-lg md:text-left max-w-xl mx-auto md:mx-0 mb-5">
+      <p className="text-left text-lg max-w-xl md:mx-0 mb-5">
         i develop compelling designs for businesses using the most sophisticated
         technologies available today for fully interactive and responsive
         websites and apps.
       </p>
       <Link href="/contact" passHref>
-        <PrimaryButton className="block mx-auto md:inline-block">
+        <PrimaryButton className="block md:inline-block">
           let&apos;s talk.
         </PrimaryButton>
       </Link>
