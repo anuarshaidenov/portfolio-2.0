@@ -41,7 +41,7 @@ const AboutPage = () => {
         and speak 4 languages including english, kazakh, russian and turkish.
       </p>
 
-      <h2 className="font-bold text-4xl mb-4">are you hiring?</h2>
+      <h2 className="font-bold text-4xl mb-4">you hiring?</h2>
 
       <h3 className="text-2xl mb-2">some of my technical skills include:</h3>
       <ul className="list-disc list-inside font-secondary mb-4">

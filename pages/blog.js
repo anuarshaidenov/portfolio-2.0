@@ -10,7 +10,7 @@ const BlogPage = ({ posts }) => {
         {posts.map((post) => (
           <Link key={post.link} href={post.link} passHref>
             <a target="_blank">
-              <li className="max-w-xl cursor-pointer mb-10">
+              <li className="max-w-xl cursor-pointer mb-10 hover:opacity-70">
                 <p className="font-secondary text-sm mb-2">{post.date}</p>
                 <h3 className="font-bold text-xl mb-2">{post.title}</h3>
                 <p className="text-sm">{post.description.slice(0, 240)}...</p>
@@ -33,6 +33,7 @@ export const getStaticProps = async () => {
     props: {
       posts: data.dataMedium,
     },
+    revalidate: 10,
   };
 };
 
