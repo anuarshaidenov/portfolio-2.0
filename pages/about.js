@@ -1,5 +1,7 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect } from 'react';
+import PrimaryButton from '../components/PrimaryButton';
 import profilePic from '../public/me.png';
 
 const AboutPage = () => {
@@ -39,17 +41,26 @@ const AboutPage = () => {
         and speak 4 languages including english, kazakh, russian and turkish.
       </p>
 
-      <h3 className="font-bold text-2xl mb-2">
-        some of my technical skills include:
-      </h3>
-      <ul className="list-disc list-inside font-secondary">
+      <h2 className="font-bold text-4xl mb-4">are you hiring?</h2>
+
+      <h3 className="text-2xl mb-2">some of my technical skills include:</h3>
+      <ul className="list-disc list-inside font-secondary mb-4">
         <li>NextJS.</li>
         <li>React.</li>
         <li>Redux.</li>
+        <li>Ruby on Rails.</li>
+        <li>PostgreSQL.</li>
         <li>Sass.</li>
         <li>Tailwind CSS.</li>
-        <li>Ruby on rails.</li>
       </ul>
+      <Link
+        href="https://docs.google.com/document/d/1aLm1ps9YnlqcZlE8ezQ5xUlxWXyfT0MRcqMW27hX_XY/edit?usp=sharing"
+        passHref
+      >
+        <a target="_blank">
+          <PrimaryButton>my resume</PrimaryButton>
+        </a>
+      </Link>
     </section>
   );
 };
