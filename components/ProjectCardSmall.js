@@ -4,7 +4,7 @@ const ProjectCardSmall = ({ className }) => {
   return (
     <Link href="/projects/slug" passHref>
       <div
-        className={`border-solid border-2 border-black px-4 py-10 rounded-2xl text-center grid gap-5 justify-items-center hover:shadow-[-6px_6px_#000] transition-shadow duration-300 ease-in-out cursor-pointer ${
+        className={`border-solid border-2 border-black px-4 py-10 rounded-2xl text-center grid gap-5 justify-items-center hover:shadow-[-6px_6px_#000] transition-shadow duration-300 ease-in-out cursor-pointer bg-primary ${
           className || ''
         }`}
       >
