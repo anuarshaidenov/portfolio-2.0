@@ -15,7 +15,7 @@ const AboutPage = () => {
         turning an idea into reality.
       </h1>
       <p className="text-xl max-w-5xl leading-8 lg:text-2xl lg:leading-9 lowercase mb-10">
-        <div className="mb-4 sm:mr-10 border-4 -rotate-3 relative w-[200px] h-[300px] sm:float-left">
+        <div className="mb-4 sm:ml-10 border-4 -rotate-3 relative w-[200px] h-[300px] sm:float-right">
           <Image
             src={profilePic}
             alt="Picture of me"
@@ -38,6 +38,7 @@ const AboutPage = () => {
         <br />
         and speak 4 languages including english, kazakh, russian and turkish.
       </p>
+
       <h3 className="font-bold text-2xl mb-2">
         some of my technical skills include:
       </h3>
