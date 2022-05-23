@@ -2,6 +2,8 @@ import NextNProgress from 'nextjs-progressbar';
 import Layout from '../components/Layout';
 import '../styles/globals.css';
 import { DefaultSeo, NextSeo } from 'next-seo';
+import { Provider } from 'react-redux';
+import { store } from '../redux/store';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -27,9 +29,11 @@ function MyApp({ Component, pageProps }) {
         }}
       />
       <NextNProgress color="#F73E59" startPosition={0.9} height={2} />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <Provider store={store}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </Provider>
     </>
   );
 }
