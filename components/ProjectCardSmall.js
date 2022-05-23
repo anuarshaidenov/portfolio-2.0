@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 const ProjectCardSmall = ({ className = '', project }) => {
-  const { id, title } = project;
+  const { id, title, description, technologies } = project;
   return (
     <Link href={`/projects/${id}`} passHref>
       <div
@@ -11,26 +11,16 @@ const ProjectCardSmall = ({ className = '', project }) => {
       >
         <h3 className="font-bold text-3xl">{title}.</h3>
         <ul className="flex flex-wrap justify-center items-center gap-2 max-w-[280px]">
-          <li className="border-solid font-secondary border-2 border-black p-1 rounded-2xl text-[.6rem] px-2">
-            card tag
-          </li>
-          <li className="border-solid font-secondary border-2 border-black p-1 rounded-2xl text-[.6rem] px-2">
-            card tag
-          </li>
-          <li className="border-solid font-secondary border-2 border-black p-1 rounded-2xl text-[.6rem] px-2">
-            card tag
-          </li>
-          <li className="border-solid font-secondary border-2 border-black p-1 rounded-2xl text-[.6rem] px-2">
-            card tag
-          </li>
-          <li className="border-solid font-secondary border-2 border-black p-1 rounded-2xl text-[.6rem] px-2">
-            card tag
-          </li>
+          {technologies.map((technology) => (
+            <li
+              key={technology}
+              className="border-solid font-secondary border-2 border-black p-1 rounded-2xl text-[.6rem] px-2"
+            >
+              {technology}
+            </li>
+          ))}
         </ul>
-        <p>
-          &quot;Awesome books&quot; is a simple website that displays a list of
-          books and allows you to add and remove books from that list.
-        </p>
+        <p>{description.slice(0, 100)}...</p>
       </div>
     </Link>
   );
