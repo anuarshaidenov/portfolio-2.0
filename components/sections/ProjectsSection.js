@@ -1,11 +1,7 @@
 import ProjectCardSmall from '../ProjectCardSmall';
 import ProjectCardBig from '../ProjectCardBig';
-import { useSelector } from 'react-redux';
 
-const ProjectsSections = () => {
-  const projects = useSelector((state) => state.projects);
-  console.log(projects);
-
+const ProjectsSections = ({ projects }) => {
   return (
     <section className="container max-w-6xl w-11/12 py-20 lg:pt-28">
       <h2 className="text-5xl font-bold text-center mb-20 lg:mb-34 lg:text-7xl">
