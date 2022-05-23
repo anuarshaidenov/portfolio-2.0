@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, current } from '@reduxjs/toolkit';
 
 const initialState = {
   projects: [],
@@ -9,11 +9,12 @@ export const projectsSlice = createSlice({
   initialState,
   reducers: {
     setProjects: (state, action) => {
-      state.projects = action.payload;
+      console.log(current(state));
+      return action.payload;
     },
   },
 });
 
-export const { setProjects } = projectSlice.actions;
+export const { setProjects } = projectsSlice.actions;
 
 export default projectsSlice.reducer;
