@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
             'A front-end developer, passionate about UI and UX. I can help you boost your business and yurn your ideas to reality.',
           images: [
             {
-              url: 'blob:https://vercel.com/0393ab65-3cd3-4c17-b270-e57accfeca70',
+              url: 'https://i.ibb.co/193w4kV/anuar-shaidenov-s-portfolio-home.png',
               width: 800,
               height: 420,
               alt: 'Anuar Shaidenov',
