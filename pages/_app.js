@@ -9,11 +9,11 @@ function MyApp({ Component, pageProps }) {
       <DefaultSeo
         title="anuar shaidenov"
         defaultTitle="anuar shaidenov"
-        description="A front-end developer, passionate about UI and UX. I could help you boost your business and yurn your ideas to reality."
+        description="A front-end developer, passionate about UI and UX. I can help you boost your business and yurn your ideas to reality."
         openGraph={{
           title: 'Anuar Shaidenov',
           description:
-            'A front-end developer, passionate about UI and UX. I could help you boost your business and yurn your ideas to reality.',
+            'A front-end developer, passionate about UI and UX. I can help you boost your business and yurn your ideas to reality.',
           image: 'https://avatars.githubusercontent.com/u/45717589?v=4',
           width: 800,
           height: 420,
