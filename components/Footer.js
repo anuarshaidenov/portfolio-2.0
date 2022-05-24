@@ -35,12 +35,12 @@ const Footer = () => {
           </Link>
         </li>
         <li>
-          <Link href="https://www.instagram.com/044anuar/">
+          <Link href="https://medium.com/@anuarshaidenov">
             <a
               target="_blank"
               className="font-secondary hover:text-secondary hover:opacity-60 transition-all duration-300 ease-in-out"
             >
-              instagram.
+              medium.
             </a>
           </Link>
         </li>
