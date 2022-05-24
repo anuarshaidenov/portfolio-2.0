@@ -14,7 +14,7 @@ const AboutPage = () => {
 
   return (
     <>
-      <NextSeo title="anuar | about me." />
+      <NextSeo title="anuar shaidenov | about me." />
 
       <section className="container max-w-6xl w-11/12 py-20 md:pt-40">
         <h1 className="font-bold text-5xl mb-10 sm:text-7xl sm:mb-12 md:text-8xl md:mb-20 lg:text-9xl lg:mb-28">
