@@ -26,14 +26,20 @@ function MyApp({ Component, pageProps }) {
         title="anuar shaidenov"
         defaultTitle="anuar shaidenov"
         description="A front-end developer, passionate about UI and UX. I can help you boost your business and yurn your ideas to reality."
+        canonical="https://www.anuarshaidenov.com/"
         openGraph={{
+          url: 'https://www.anuarshaidenov.com/',
           title: 'Anuar Shaidenov',
           description:
             'A front-end developer, passionate about UI and UX. I can help you boost your business and yurn your ideas to reality.',
-          image: 'https://avatars.githubusercontent.com/u/45717589?v=4',
-          width: 800,
-          height: 420,
-          alt: 'Anuar Shaidenov',
+          images: [
+            {
+              url: 'blob:https://vercel.com/0393ab65-3cd3-4c17-b270-e57accfeca70',
+              width: 800,
+              height: 420,
+              alt: 'Anuar Shaidenov',
+            },
+          ],
         }}
         twitter={{
           handle: '@anuarnyi',
