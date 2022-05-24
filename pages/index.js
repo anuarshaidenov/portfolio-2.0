@@ -7,7 +7,7 @@ import { BASE_API_URL } from '../helpers/constants';
 export default function Home({ projects }) {
   return (
     <>
-      <NextSeo title="Anuar's Portfolio | Home" />
+      <NextSeo title="anuar shaidenov's portfolio | home" />
       <HeroSection />
       <ProjectsSections projects={projects} />
     </>

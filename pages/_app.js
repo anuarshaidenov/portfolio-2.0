@@ -2,16 +2,13 @@ import NextNProgress from 'nextjs-progressbar';
 import Layout from '../components/Layout';
 import '../styles/globals.css';
 import { DefaultSeo, NextSeo } from 'next-seo';
-import { Provider } from 'react-redux';
-import { store } from '../redux/store';
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <DefaultSeo
-        title="Anuar Shaidenov"
-        titleTemplate="Anuar Shaidenov"
-        defaultTitle="Anuar Shaidenov"
+        title="anuar shaidenov"
+        defaultTitle="anuar shaidenov"
         description="A front-end developer, passionate about UI and UX. I could help you boost your business and yurn your ideas to reality."
         openGraph={{
           title: 'Anuar Shaidenov',
@@ -29,11 +26,10 @@ function MyApp({ Component, pageProps }) {
         }}
       />
       <NextNProgress color="#F73E59" startPosition={0.9} height={2} />
-      <Provider store={store}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </Provider>
+
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }
