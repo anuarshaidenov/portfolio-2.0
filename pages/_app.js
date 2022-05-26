@@ -3,10 +3,17 @@ import Layout from '../components/Layout';
 import '../styles/globals.css';
 import { DefaultSeo, NextSeo } from 'next-seo';
 import Script from 'next/script';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="Tv1zcmHIi9Op24CfAD4cj1nSqEIQ-QnMaHoeZy66geg"
+        />
+      </Head>
       <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
