@@ -32,13 +32,13 @@ function MyApp({ Component, pageProps }) {
       <DefaultSeo
         title="anuar shaidenov"
         defaultTitle="anuar shaidenov"
-        description="A front-end developer, passionate about UI and UX. I can help you boost your business and yurn your ideas to reality."
+        description="I am Anuar Shaidenov. A front-end developer, passionate about UI and UX. I can help you boost your business and yurn your ideas to reality."
         canonical="https://www.anuarshaidenov.com/"
         openGraph={{
           url: 'https://www.anuarshaidenov.com/',
           title: 'Anuar Shaidenov',
           description:
-            'A front-end developer, passionate about UI and UX. I can help you boost your business and yurn your ideas to reality.',
+            'I am Anuar Shaidenov. A front-end developer, passionate about UI and UX. I can help you boost your business and yurn your ideas to reality.',
           images: [
             {
               url: 'https://i.ibb.co/193w4kV/anuar-shaidenov-s-portfolio-home.png',
