@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect } from 'react';
 import PrimaryButton from '../components/PrimaryButton';
-import profilePic from '../public/me.png';
+import profilePic from '../public/me.jpeg';
 import { NextSeo } from 'next-seo';
 
 const AboutPage = () => {
