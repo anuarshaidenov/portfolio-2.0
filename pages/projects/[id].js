@@ -22,11 +22,13 @@ const ProjectDetails = ({ project }) => {
               live link.
             </a>
           </Link>
-          <Link href={repository}>
-            <a className="font-secondary underline" target="_blank">
-              repository.
-            </a>
-          </Link>
+          {repository && (
+            <Link href={repository}>
+              <a className="font-secondary underline" target="_blank">
+                repository.
+              </a>
+            </Link>
+          )}
         </div>
         <h3 className="font-bold text-2xl mb-2">technologies used:</h3>
         <ul className="list-disc list-inside font-secondary">
