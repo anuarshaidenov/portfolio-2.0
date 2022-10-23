@@ -1,4 +1,3 @@
-import NextNProgress from 'nextjs-progressbar';
 import Layout from '../components/Layout';
 import '../styles/globals.css';
 import { DefaultSeo, NextSeo } from 'next-seo';
@@ -54,7 +53,6 @@ function MyApp({ Component, pageProps }) {
           site: '@anuarnyi',
         }}
       />
-      <NextNProgress color="#F73E59" startPosition={0.9} height={2} />
 
       <Layout>
         <Component {...pageProps} />

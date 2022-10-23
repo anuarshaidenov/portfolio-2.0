@@ -29,7 +29,7 @@ const BlogPage = ({ posts }) => {
 
 export const getStaticProps = async () => {
   const res = await fetch(
-    'https://mediumpostapi.herokuapp.com/?usermedium=anuarshaidenov'
+    'https://mediumpostsapi.vercel.app/api/anuarshaidenov'
   );
   const data = await res.json();
 
